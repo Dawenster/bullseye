@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AboutViewController.h"
 
 @interface ViewController ()
 
@@ -95,6 +96,14 @@
   
   [self startNewRound];
   [self updateLabels];
+}
+
+- (IBAction)showInfo
+{
+  AboutViewController *controller = [[AboutViewController alloc]
+    initWithNibName:@"AboutViewController" bundle:nil];
+  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+  [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

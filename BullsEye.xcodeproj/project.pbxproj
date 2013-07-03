@@ -18,6 +18,8 @@
 		263D0BEC1783473700DF385D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 263D0BEB1783473700DF385D /* Default-568h@2x.png */; };
 		263D0BEF1783473700DF385D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263D0BEE1783473700DF385D /* ViewController.m */; };
 		263D0BF21783473700DF385D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D0BF01783473700DF385D /* ViewController.xib */; };
+		263D0BFB178487DD00DF385D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263D0BF9178487DD00DF385D /* AboutViewController.m */; };
+		263D0BFC178487DD00DF385D /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D0BFA178487DD00DF385D /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		263D0BED1783473700DF385D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		263D0BEE1783473700DF385D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		263D0BF11783473700DF385D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		263D0BF8178487DD00DF385D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		263D0BF9178487DD00DF385D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		263D0BFA178487DD00DF385D /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				263D0BED1783473700DF385D /* ViewController.h */,
 				263D0BEE1783473700DF385D /* ViewController.m */,
 				263D0BF01783473700DF385D /* ViewController.xib */,
+				263D0BF8178487DD00DF385D /* AboutViewController.h */,
+				263D0BF9178487DD00DF385D /* AboutViewController.m */,
+				263D0BFA178487DD00DF385D /* AboutViewController.xib */,
 				263D0BDC1783473700DF385D /* Supporting Files */,
 			);
 			path = BullsEye;
@@ -163,6 +171,7 @@
 				263D0BEA1783473700DF385D /* Default@2x.png in Resources */,
 				263D0BEC1783473700DF385D /* Default-568h@2x.png in Resources */,
 				263D0BF21783473700DF385D /* ViewController.xib in Resources */,
+				263D0BFC178487DD00DF385D /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				263D0BE21783473700DF385D /* main.m in Sources */,
 				263D0BE61783473700DF385D /* AppDelegate.m in Sources */,
 				263D0BEF1783473700DF385D /* ViewController.m in Sources */,
+				263D0BFB178487DD00DF385D /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

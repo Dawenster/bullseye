@@ -18,5 +18,6 @@
 - (IBAction)showAlert;
 - (IBAction)startOver;
 - (IBAction)sliderMoved:(UISlider *)slider;
+- (IBAction)showInfo;
 
 @end
