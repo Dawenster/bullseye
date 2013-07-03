@@ -15,12 +15,31 @@
 @implementation ViewController
 {
   int currentValue;
+  int targetValue;
+  int score;
+  int round;
+}
+
+- (void)updateLabels
+{
+  self.targetLabel.text = [NSString stringWithFormat:@"%d", targetValue];
+  self.scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+  self.roundLabel.text = [NSString stringWithFormat:@"%d", round];
+}
+
+- (void)startNewRound
+{
+  targetValue = 1 + (arc4random() % 100);
+  self.slider.value = currentValue;
+  round += 1;
 }
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
   currentValue = 50;
+  [super viewDidLoad];
+  [self startNewRound];
+  [self updateLabels];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,17 +50,32 @@
 
 - (IBAction)showAlert
 {
+  int difference = abs(currentValue - targetValue);
+  int points = 100 - difference;
+  
+  NSMutableString *title = [NSMutableString stringWithFormat:
+    @"You scored %d points", points];
+  
+  if (difference == 0) {
+    [title appendString:@" + 100 bonus points for a perfect hit!"];
+    points += 100;
+  }
+  
+  score += points;
+  
   NSString *message = [NSString stringWithFormat:
-    @"The value of the slider is: %d", currentValue];
+    @"The target was %d and you hit %d", targetValue, currentValue];
   
   UIAlertView *alertView = [[UIAlertView alloc]
-    initWithTitle:@"Hello, World!"
+    initWithTitle:title
     message:message
     delegate:nil
     cancelButtonTitle:@"OK"
     otherButtonTitles:nil];
   
   [alertView show];
+  [self startNewRound];
+  [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(UISlider *)slider
