@@ -36,7 +36,7 @@
 
 - (void)viewDidLoad
 {
-  currentValue = 50;
+  currentValue = self.slider.value;
   [super viewDidLoad];
   [self startNewRound];
   [self updateLabels];
@@ -69,18 +69,32 @@
   UIAlertView *alertView = [[UIAlertView alloc]
     initWithTitle:title
     message:message
-    delegate:nil
+    delegate:self
     cancelButtonTitle:@"OK"
     otherButtonTitles:nil];
   
   [alertView show];
-  [self startNewRound];
-  [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(UISlider *)slider
 {
   currentValue = lroundf(slider.value);
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+  [self startNewRound];
+  [self updateLabels];
+}
+
+- (IBAction)startOver
+{
+  currentValue = 50;
+  score = 0;
+  round = 0;
+  
+  [self startNewRound];
+  [self updateLabels];
 }
 
 @end

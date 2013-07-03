@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UISlider *slider;
 @property (nonatomic, strong) IBOutlet UILabel *targetLabel;
@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *roundLabel;
 
 - (IBAction)showAlert;
+- (IBAction)startOver;
 - (IBAction)sliderMoved:(UISlider *)slider;
 
 @end
